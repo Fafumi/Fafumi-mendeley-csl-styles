@@ -4,17 +4,13 @@
     <title>Fahmi APA 2025 Rev. 01</title>
     <id>http://www.zotero.org/styles/fahmi-apa-2025-rev01</id>
     <link href="http://www.zotero.org/styles/fahmi-apa-2025-rev01" rel="self"/>
-    <author>
-      <name>Fahmi</name>
-    </author>
+    <author><name>Fahmi</name></author>
     <category citation-format="numeric"/>
     <updated>2025-08-22T00:00:00+00:00</updated>
   </info>
 
   <citation collapse="citation-number">
-    <sort>
-      <key variable="citation-number"/>
-    </sort>
+    <sort><key variable="citation-number"/></sort>
     <layout prefix="[" suffix="]" delimiter=", ">
       <text variable="citation-number"/>
     </layout>
