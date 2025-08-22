@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0" class="in-text" name="Fahmi APA 2025 Rev. 01">
+  <info>
+    <title>Fahmi APA 2025 Rev. 01</title>
+    <id>http://www.zotero.org/styles/fahmi-apa-2025-rev01</id>
+    <link href="http://www.zotero.org/styles/fahmi-apa-2025-rev01" rel="self"/>
+    <author>
+      <name>Fahmi</name>
+    </author>
+    <category citation-format="numeric"/>
+    <updated>2025-08-22T00:00:00+00:00</updated>
+  </info>
+
+  <!-- Citation: show numbers in square brackets -->
+  <citation collapse="citation-number">
+    <sort>
+      <key variable="citation-number"/>
+    </sort>
+    <layout prefix="[" suffix="]" delimiter=", ">
+      <text variable="citation-number"/>
+    </layout>
+  </citation>
+
+  <!-- Bibliography: Harvard style but numbered -->
+  <bibliography et-al-min="6" et-al-use-first="5" second-field-align="flush">
+    <layout>
+      <text variable="citation-number" prefix="[" suffix="] "/>
+      <names variable="author" delimiter=", " and="text">
+        <name and="text" initialize-with="."/>
+      </names>
+      <text variable="issued" prefix=", (" suffix=")." form="year"/>
+      <text variable="title" prefix=" "/>
+      <text variable="container-title" prefix=". "/>
+      <group delimiter=", ">
+        <text variable="volume"/>
+        <text variable="issue" prefix="(" suffix=")"/>
+        <text variable="page" prefix="p."/>
+      </group>
+    </layout>
+  </bibliography>
+</style>
