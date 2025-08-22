@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" version="1.0" class="in-text" default-locale="en-US" demote-non-dropping-particle="sort-only">
   <info>
-    <title>My Custom Numbered Style</title>
+    <title>Fafumi APA Style</title>
     <id>http://www.zotero.org/styles/my-custom-numbered</id>
     <link href="http://www.zotero.org/styles/my-custom-numbered" rel="self"/>
     <link href="http://www.zotero.org/styles/vancouver" rel="template"/>
