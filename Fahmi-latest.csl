@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0" class="in-text" name="Fahmi APA 2025 Rev. 01">
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0.1" name="Fahmi APA 2025 Rev. 01">
   <info>
     <title>Fahmi APA 2025 Rev. 01</title>
     <id>http://www.zotero.org/styles/fahmi-apa-2025-rev01</id>
@@ -25,10 +25,12 @@
   <bibliography et-al-min="6" et-al-use-first="5" second-field-align="flush">
     <layout>
       <text variable="citation-number" prefix="[" suffix="] "/>
-      <names variable="author" delimiter=", " and="text">
-        <name and="text" initialize-with="."/>
+      <names variable="author" delimiter=", ">
+        <name initialize-with="."/>
       </names>
-      <text variable="issued" prefix=", (" suffix=")." form="year"/>
+      <date variable="issued" prefix=", (" suffix=").">
+        <date-part name="year"/>
+      </date>
       <text variable="title" prefix=" "/>
       <text variable="container-title" prefix=". "/>
       <group delimiter=", ">
