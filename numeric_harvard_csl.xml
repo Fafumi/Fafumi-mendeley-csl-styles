@@ -1,51 +1,37 @@
-<?xml version="1.0" encoding="utf-8"?>
-<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0">
+<?xml version="1.0" encoding="UTF-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0" class="in-text" default-locale="en-US">
   <info>
-    <title>Numeric-Harvard Hybrid (fixed)</title>
+    <title>Numeric Harvard Hybrid</title>
     <id>http://www.zotero.org/styles/numeric-harvard-hybrid</id>
     <link href="http://www.zotero.org/styles/numeric-harvard-hybrid" rel="self"/>
     <author>
-      <name>Custom by ChatGPT</name>
+      <name>Your Name</name>
     </author>
     <category citation-format="numeric"/>
-    <category field="generic-base"/>
     <updated>2025-08-22T12:00:00+00:00</updated>
   </info>
 
-  <!-- In-text citations: numeric in square brackets -->
+  <!-- In-text citation: [1] -->
   <citation collapse="citation-number">
-    <layout prefix="[" suffix="]" delimiter=", ">
+    <layout prefix="[" suffix="]" delimiter=",">
       <text variable="citation-number"/>
     </layout>
   </citation>
 
-  <!-- Bibliography -->
-  <bibliography>
+  <!-- Reference list -->
+  <bibliography et-al-min="6" et-al-use-first="5" second-field-align="flush">
     <sort>
       <key variable="citation-number"/>
     </sort>
-    <layout hanging-indent="true" delimiter=" ">
-      <!-- Authors: Lastname, Initials, and Lastname, Initials. -->
-      <names variable="author" delimiter=", ">
-        <name and="text" initialize-with="." name-as-sort-order="all"/>
-      </names>
-
-      <!-- Year in parentheses -->
-      <date variable="issued" prefix=" (" suffix=")">
-        <date-part name="year"/>
-      </date>
-
-      <!-- Title -->
-      <text variable="title" prefix=". " suffix="."/>
-
-      <!-- Journal, volume(issue), p.pages -->
-      <group prefix=" " delimiter=", ">
-        <text variable="container-title"/>
-        <text variable="volume" prefix=", "/>
-        <text variable="issue" prefix="(" suffix=")"/>
-        <text variable="page" prefix=", p."/>
-      </group>
+    <layout>
+      <text variable="author"/>
+      <text prefix=", (" suffix="). " variable="issued"/>
+      <text variable="title" suffix=". "/>
+      <text variable="container-title" suffix=", "/>
+      <text variable="volume" suffix=""/>
+      <text prefix="(" suffix=")" variable="issue"/>
+      <text prefix=", p." variable="page"/>
+      <text prefix=". " variable="DOI"/>
     </layout>
   </bibliography>
-
 </style>
