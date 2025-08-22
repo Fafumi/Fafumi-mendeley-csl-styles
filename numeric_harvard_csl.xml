@@ -1,45 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
-<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0" class="in-text" default-locale="en-US">
-  <info>
-    <title>Numeric Harvard Custom</title>
-    <id>http://www.zotero.org/styles/numeric-harvard-custom</id>
-    <link href="http://www.zotero.org/styles/numeric-harvard-custom" rel="self"/>
-    <author>
-      <name>Your Name</name>
-    </author>
-    <category citation-format="numeric"/>
-    <category field="engineering"/>
-    <updated>2025-08-22T12:00:00+00:00</updated>
-  </info>
-
-  <!-- Citation format: [1], [2], etc. -->
-  <citation collapse="citation-number">
-    <sort>
-      <key variable="citation-number"/>
-    </sort>
-    <layout delimiter=", ">
-      <text variable="citation-number" prefix="[" suffix="]"/>
-    </layout>
-  </citation>
-
-  <!-- Bibliography format -->
-  <bibliography>
-    <sort>
-      <key variable="author"/>
-      <key variable="issued"/>
-    </sort>
-    <layout suffix=".">
-      <text variable="author" suffix=", "/>
+<bibliography>
+  <layout suffix=".">
+    <text variable="citation-number" prefix="[" suffix="] "/>
+    <group delimiter=", ">
+      <text macro="author"/>
       <date variable="issued">
-        <date-part name="year" suffix=". "/>
+        <date-part name="year"/>
       </date>
-      <text variable="title" suffix=". "/>
-      <text variable="container-title" suffix=", "/>
+      <text macro="title" suffix="."/>
+      <text variable="container-title" font-style="italic"/>
       <group delimiter=", ">
         <text variable="volume"/>
         <text variable="issue" prefix="(" suffix=")"/>
         <text variable="page"/>
       </group>
-    </layout>
-  </bibliography>
-</style>
+    </group>
+  </layout>
+</bibliography>
