@@ -1,37 +1,45 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" version="1.0" class="in-text" default-locale="en-US">
   <info>
-    <title>Numeric Harvard Hybrid</title>
-    <id>http://www.zotero.org/styles/numeric-harvard-hybrid</id>
-    <link href="http://www.zotero.org/styles/numeric-harvard-hybrid" rel="self"/>
+    <title>Numeric Harvard Custom</title>
+    <id>http://www.zotero.org/styles/numeric-harvard-custom</id>
+    <link href="http://www.zotero.org/styles/numeric-harvard-custom" rel="self"/>
     <author>
       <name>Your Name</name>
     </author>
     <category citation-format="numeric"/>
+    <category field="engineering"/>
     <updated>2025-08-22T12:00:00+00:00</updated>
   </info>
 
-  <!-- In-text citation: [1] -->
+  <!-- Citation format: [1], [2], etc. -->
   <citation collapse="citation-number">
-    <layout prefix="[" suffix="]" delimiter=",">
-      <text variable="citation-number"/>
-    </layout>
-  </citation>
-
-  <!-- Reference list -->
-  <bibliography et-al-min="6" et-al-use-first="5" second-field-align="flush">
     <sort>
       <key variable="citation-number"/>
     </sort>
-    <layout>
-      <text variable="author"/>
-      <text prefix=", (" suffix="). " variable="issued"/>
+    <layout delimiter=", ">
+      <text variable="citation-number" prefix="[" suffix="]"/>
+    </layout>
+  </citation>
+
+  <!-- Bibliography format -->
+  <bibliography>
+    <sort>
+      <key variable="author"/>
+      <key variable="issued"/>
+    </sort>
+    <layout suffix=".">
+      <text variable="author" suffix=", "/>
+      <date variable="issued">
+        <date-part name="year" suffix=". "/>
+      </date>
       <text variable="title" suffix=". "/>
       <text variable="container-title" suffix=", "/>
-      <text variable="volume" suffix=""/>
-      <text prefix="(" suffix=")" variable="issue"/>
-      <text prefix=", p." variable="page"/>
-      <text prefix=". " variable="DOI"/>
+      <group delimiter=", ">
+        <text variable="volume"/>
+        <text variable="issue" prefix="(" suffix=")"/>
+        <text variable="page"/>
+      </group>
     </layout>
   </bibliography>
 </style>
