@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0">
+  <info>
+    <title>Numeric-Harvard Hybrid</title>
+    <id>http://www.zotero.org/styles/numeric-harvard-hybrid</id>
+    <link href="http://www.zotero.org/styles/numeric-harvard-hybrid" rel="self"/>
+    <author>
+      <name>Custom by ChatGPT</name>
+    </author>
+    <category citation-format="numeric"/>
+    <category field="generic-base"/>
+    <updated>2025-08-22T00:00:00+00:00</updated>
+  </info>
+
+  <!-- In-text citations -->
+  <citation collapse="citation-number">
+    <layout prefix="[" suffix="]" delimiter=", ">
+      <text variable="citation-number"/>
+    </layout>
+  </citation>
+
+  <!-- Bibliography formatting -->
+  <bibliography>
+    <sort>
+      <key variable="citation-number"/>
+    </sort>
+    <layout suffix=".">
+      <!-- Author list -->
+      <names variable="author" delimiter=", ">
+        <name name-as-sort-order="all" and="text" initialize-with="." delimiter=", "/>
+      </names>
+      <date variable="issued" prefix=", (" suffix=")">
+        <date-part name="year"/>
+      </date>
+      <text variable="title" prefix=". "/>
+      <group prefix=". ">
+        <text variable="container-title"/>
+        <text variable="volume" prefix=", "/>
+        <text variable="issue" prefix="(" suffix=")"/>
+        <text variable="page" prefix=", p."/>
+      </group>
+    </layout>
+  </bibliography>
+</style>
