@@ -1,18 +1,58 @@
-<bibliography>
-  <layout suffix=".">
-    <text variable="citation-number" prefix="[" suffix="] "/>
-    <group delimiter=", ">
-      <text macro="author"/>
-      <date variable="issued">
-        <date-part name="year"/>
-      </date>
-      <text macro="title" suffix="."/>
-      <text variable="container-title" font-style="italic"/>
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0" class="in-text" default-locale="en-US" demote-non-dropping-particle="sort-only">
+  <info>
+    <title>My Custom Numbered Style</title>
+    <id>http://www.zotero.org/styles/my-custom-numbered</id>
+    <link href="http://www.zotero.org/styles/my-custom-numbered" rel="self"/>
+    <link href="http://www.zotero.org/styles/vancouver" rel="template"/>
+    <author>
+      <name>Your Name</name>
+    </author>
+    <category citation-format="numeric"/>
+    <category field="generic-base"/>
+    <updated>2025-08-22T00:00:00+00:00</updated>
+  </info>
+
+  <!-- Citation in text -->
+  <citation collapse="citation-number">
+    <sort>
+      <key variable="citation-number"/>
+    </sort>
+    <layout prefix="[" suffix="]" delimiter=",">
+      <text variable="citation-number"/>
+    </layout>
+  </citation>
+
+  <!-- Bibliography -->
+  <bibliography>
+    <layout suffix=".">
+      <text variable="citation-number" prefix="[" suffix="] "/>
       <group delimiter=", ">
-        <text variable="volume"/>
-        <text variable="issue" prefix="(" suffix=")"/>
-        <text variable="page"/>
+        <text macro="author"/>
+        <date variable="issued">
+          <date-part name="year"/>
+        </date>
+        <text macro="title" suffix="."/>
+        <text variable="container-title" font-style="italic"/>
+        <group delimiter=", ">
+          <text variable="volume"/>
+          <text variable="issue" prefix="(" suffix=")"/>
+          <text variable="page"/>
+        </group>
       </group>
-    </group>
-  </layout>
-</bibliography>
+    </layout>
+  </bibliography>
+
+  <!-- Author formatting -->
+  <macro name="author">
+    <names variable="author" delimiter=", ">
+      <name form="long" and="text" delimiter=", "/>
+    </names>
+  </macro>
+
+  <!-- Title formatting -->
+  <macro name="title">
+    <text variable="title"/>
+  </macro>
+
+</style>
